@@ -12,12 +12,12 @@ public class Combustivel{
         System.out.println("Digite a distância a ser percorrida(em km): ");
         float distancia = escanear.nextFloat(); 
 
-        System.out.println("Digite o preço unitário do litro do combustível: ");
+        System.out.println("Digite o preço unitário do litro do combustível(em reais): ");
         float precoLitro = escanear.nextFloat(); 
 
         float litrosCombustivel = distancia / kml;
         float precoFinal = litrosCombustivel * precoLitro;
 
-        
+        System.out.println("O custo desse trajeto será " + precoFinal + " reais.");
     }
 }

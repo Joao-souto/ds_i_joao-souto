@@ -15,9 +15,12 @@ public class Combustivel{
 
         System.out.println("Digite o preço unitário do litro do combustível(em reais): ");
         float precoLitro = escanear.nextFloat(); 
+        // variaveis recebendo valores
+
 
         float litrosCombustivel = distancia / kml;
         float precoFinal = litrosCombustivel * precoLitro;
+        // cálculo feito
 
         System.out.println("O custo desse trajeto será " + precoFinal + " reais.");
     }

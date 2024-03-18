@@ -4,17 +4,17 @@ import java.util.Scanner;
 public class Combustivel{
     public static void main(String[] args){
         
-        Scanner escanear = new Scanner(System.in);
+        Scanner recebe = new Scanner(System.in);
         // atribuindo método de scanner a uma variável
 
         System.out.println("Digite a quantidade de Km/l: ");
-        float kml = escanear.nextFloat();
+        float kml = recebe.nextFloat();
 
         System.out.println("Digite a distância a ser percorrida(em km): ");
-        float distancia = escanear.nextFloat(); 
+        float distancia = recebe.nextFloat(); 
 
         System.out.println("Digite o preço unitário do litro do combustível(em reais): ");
-        float precoLitro = escanear.nextFloat(); 
+        float precoLitro = recebe.nextFloat(); 
         // variaveis recebendo valores
 
 

@@ -1,3 +1,4 @@
+package exercicios1;
 import java.util.Scanner;
 // importação de biblioteca para utilizar "imput"
 public class Combustivel{

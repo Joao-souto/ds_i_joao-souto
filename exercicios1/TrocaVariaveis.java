@@ -1,3 +1,4 @@
+package exercicios1;
 public class TrocaVariaveis{
     public static void main(String[] args){
         int numero1 = 3;        

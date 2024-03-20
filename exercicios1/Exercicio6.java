@@ -18,9 +18,9 @@ public class Exercicio6 {
         System.out.println("Insira o número de votos válidos: ");
         int votosValidos = leia.nextInt();
 
-        float porcentagemBrancos = votosBrancos * totalEleitores / 100;
-        float porcentagemNulos = votosNulos * totalEleitores / 100;
-        float porcentagemValidos = votosValidos * totalEleitores / 100;
+        float porcentagemBrancos = votosBrancos * 100 / totalEleitores;
+        float porcentagemNulos = votosNulos * 100 / totalEleitores;
+        float porcentagemValidos = votosValidos * 100 / totalEleitores;
 
         System.out.println("De " + totalEleitores + " votos, " + porcentagemBrancos + "% foram brancos, " + porcentagemNulos + "% foram nulos e " + porcentagemValidos + "% foram válidos.");
         

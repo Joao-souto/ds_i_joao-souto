@@ -12,7 +12,7 @@ public class Exercicio5 {
         float dias = idade * 365;
         float meses = dias / 30;
 
-        System.out.println("Você têm " + "");
+        System.out.println("Você têm " + dias + " e " + meses + " de vida.");
 
     }
 }

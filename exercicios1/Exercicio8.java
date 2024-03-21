@@ -13,5 +13,6 @@ public class Exercicio8 {
 
         System.out.println("Considerando o custo percentual do distribuidor e dos impostos o valor final deste carro é " + precoFinal + " reais.");
 
+        leia.close();
     }
 } 

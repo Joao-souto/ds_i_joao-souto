@@ -24,5 +24,6 @@ public class Exercicio6 {
 
         System.out.println("De " + totalEleitores + " votos, " + porcentagemBrancos + "% foram brancos, " + porcentagemNulos + "% foram nulos e " + porcentagemValidos + "% foram válidos.");
         
+        leia.close();
     }
 }

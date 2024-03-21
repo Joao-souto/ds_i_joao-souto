@@ -13,5 +13,6 @@ public class Exercicio5 {
 
         System.out.println("Você têm " + dias + "dias de vida e " + meses + " meses de vida.");
 
+        leia.close();
     }
 }

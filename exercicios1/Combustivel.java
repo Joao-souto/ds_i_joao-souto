@@ -23,5 +23,8 @@ public class Combustivel{
         // cálculo feito
 
         System.out.println("O custo desse trajeto será " + precoFinal + " reais.");
+
+        recebe.close();
+        // indica que "recebe" fecha, questão de segurança para não receber nenhum valor após finalização do programa
     }
 }

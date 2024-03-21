@@ -15,5 +15,7 @@ public class Exercicio7 {
         float salarioAjustado = (salario * porcentagemReajuste / 100) + salario;
 
         System.out.println("Seu salário após o reajuste passa a ser " + salarioAjustado + " reais.");
+
+        leia.close();
     }
 }

@@ -9,5 +9,7 @@ public class Exercicio4 {
         String print = teclado.next();
 
         System.out.println(print);
+
+        teclado.close();
     }
 }

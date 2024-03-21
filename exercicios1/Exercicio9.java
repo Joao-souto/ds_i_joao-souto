@@ -21,5 +21,7 @@ public class Exercicio9 {
         float salarioFinal = salario +  (comissaoCarro * numeroCarros) + (totalVendas * 5 / 100);
 
         System.out.println("Seu salário total será de " + salarioFinal + " reais.");
+
+        leia.close();
     }
 }

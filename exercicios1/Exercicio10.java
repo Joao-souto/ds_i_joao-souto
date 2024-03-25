@@ -15,7 +15,6 @@ public class Exercicio10 {
         String sexo = leia.next();
         sexo = sexo.toLowerCase();
 
-
         // No Java, para comparar strings, você deve usar o método equals() em vez do operador ==.
         // O operador == compara referências de objetos, não seus valores.
         if(sexo.equals("m") || sexo.equals("masculino") ){

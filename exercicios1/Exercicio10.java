@@ -15,12 +15,15 @@ public class Exercicio10 {
         String sexo = leia.next();
         sexo = sexo.toLowerCase();
 
-        if(sexo == "m" || sexo == "masculino" ){
+
+        // No Java, para comparar strings, você deve usar o método equals() em vez do operador ==.
+        // O operador == compara referências de objetos, não seus valores.
+        if(sexo.equals("m") || sexo.equals("masculino") ){
             float pesoIdeal = (float) ((72.7 * altura) - 58);
 
             System.out.println("Olá, " + nome + "! Seu peso ideal é " + pesoIdeal + " Kg.");
         }
-        else if(sexo == "f" || sexo == "feminino" ){
+        else if(sexo.equals("f") || sexo.equals("feminino") ){
             float pesoIdeal = (float) ((62.1 * altura) - 44.7);
 
             System.out.println("Olá, " + nome + "! Seu peso ideal é " + pesoIdeal + " Kg.");

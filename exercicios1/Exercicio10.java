@@ -8,25 +8,23 @@ public class Exercicio10 {
         System.out.println("Insira seu nome: ");
         String nome = leia.nextLine();
 
-        System.out.println("Insira sua altura: ");
+        System.out.println("Insira sua altura(em metros): ");
         float altura = leia.nextFloat();
 
         System.out.println("Insira seu sexo(M ou F): ");
-        String sexo = leia.nextLine();
+        String sexo = leia.next();
         sexo = sexo.toLowerCase();
 
         if(sexo == "m" || sexo == "masculino" ){
-            float pesoIdeal = (72.7 * altura) - 58;
+            float pesoIdeal = (float) ((72.7 * altura) - 58);
 
             System.out.println("Olá, " + nome + "! Seu peso ideal é " + pesoIdeal + " Kg.");
         }
-
         else if(sexo == "f" || sexo == "feminino" ){
-            float pesoIdeal = (62.1 * altura) - 44.7;
+            float pesoIdeal = (float) ((62.1 * altura) - 44.7);
 
             System.out.println("Olá, " + nome + "! Seu peso ideal é " + pesoIdeal + " Kg.");
         }
-
         else{
             System.out.println("Insira seu sexo correto!");
         }

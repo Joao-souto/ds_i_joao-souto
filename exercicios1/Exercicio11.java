@@ -5,6 +5,8 @@ public class Exercicio11 {
 
         Scanner leia = new Scanner(System.in);
 
+        float precoTotal;
+
         System.out.println("Insira o número de litros vendidos: ");
         float litrosVendidos = leia.nextFloat();
 
@@ -14,7 +16,17 @@ public class Exercicio11 {
 
         switch (codCombustivel) {
             case "a":
-                
+                if (litrosVendidos<=20) {
+                    precoTotal = (float) ((2.9 - (3*2.9/100)) * litrosVendidos);
+
+                    System.out.println("Preço total de " + litrosVendidos + " de álcool é " + precoTotal + " reais.");
+                }
+
+                else if (litrosVendidos>20) {
+                    precoTotal = (float) ((2.9 - (5*2.9/100)) * litrosVendidos);
+
+                    System.out.println("Preço total de " + litrosVendidos + " de álcool é " + precoTotal + " reais.");
+                }
             break;
 
             case "g":

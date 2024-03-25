@@ -1,7 +1,9 @@
 package exercicios1;
+
 import java.util.Scanner;
+
 public class Exercicio11 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);
 
@@ -16,26 +18,36 @@ public class Exercicio11 {
 
         switch (codCombustivel) {
             case "a":
-                if (litrosVendidos<=20) {
-                    precoTotal = (float) ((2.9 - (3*2.9/100)) * litrosVendidos);
+                if (litrosVendidos <= 20) {
+                    precoTotal = (float) ((2.9 - (3 * 2.9 / 100)) * litrosVendidos);
 
                     System.out.println("Preço total de " + litrosVendidos + " de álcool é " + precoTotal + " reais.");
                 }
 
-                else if (litrosVendidos>20) {
-                    precoTotal = (float) ((2.9 - (5*2.9/100)) * litrosVendidos);
+                else if (litrosVendidos > 20) {
+                    precoTotal = (float) ((2.9 - (5 * 2.9 / 100)) * litrosVendidos);
 
                     System.out.println("Preço total de " + litrosVendidos + " de álcool é " + precoTotal + " reais.");
                 }
-            break;
+                break;
 
             case "g":
-                
-            break;
-        
+                if (litrosVendidos <= 20) {
+                    precoTotal = (float) ((2.9 - (4 * 3.3 / 100)) * litrosVendidos);
+
+                    System.out.println("Preço total de " + litrosVendidos + " de gasolina é " + precoTotal + " reais.");
+                }
+
+                else if (litrosVendidos > 20) {
+                    precoTotal = (float) ((2.9 - (6 * 3.3 / 100)) * litrosVendidos);
+
+                    System.out.println("Preço total de " + litrosVendidos + " de gasolina é " + precoTotal + " reais.");
+                }
+                break;
+
             default:
                 System.out.println("Insira o código correto!");
-            break;
+                break;
         }
 
         leia.close();

@@ -25,9 +25,6 @@ public class Exercicio10 {
 
             System.out.println("Olá, " + nome + "! Seu peso ideal é " + pesoIdeal + " Kg.");
         }
-        else{
-            System.out.println("Insira seu sexo correto!");
-        }
 
         leia.close();
     }

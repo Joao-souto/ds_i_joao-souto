@@ -21,13 +21,13 @@ public class Exercicio11 {
                 if (litrosVendidos <= 20) {
                     precoTotal = (float) ((2.9 - (3 * 2.9 / 100)) * litrosVendidos);
 
-                    System.out.println("Preço total de " + litrosVendidos + " de álcool é " + precoTotal + " reais.");
+                    System.out.println("Preço total de " + litrosVendidos + " litros de álcool é " + precoTotal + " reais.");
                 }
 
                 else if (litrosVendidos > 20) {
                     precoTotal = (float) ((2.9 - (5 * 2.9 / 100)) * litrosVendidos);
 
-                    System.out.println("Preço total de " + litrosVendidos + " de álcool é " + precoTotal + " reais.");
+                    System.out.println("Preço total de " + litrosVendidos + " litros de álcool é " + precoTotal + " reais.");
                 }
                 break;
 
@@ -35,13 +35,13 @@ public class Exercicio11 {
                 if (litrosVendidos <= 20) {
                     precoTotal = (float) ((2.9 - (4 * 3.3 / 100)) * litrosVendidos);
 
-                    System.out.println("Preço total de " + litrosVendidos + " de gasolina é " + precoTotal + " reais.");
+                    System.out.println("Preço total de " + litrosVendidos + " litros de gasolina é " + precoTotal + " reais.");
                 }
 
                 else if (litrosVendidos > 20) {
                     precoTotal = (float) ((2.9 - (6 * 3.3 / 100)) * litrosVendidos);
 
-                    System.out.println("Preço total de " + litrosVendidos + " de gasolina é " + precoTotal + " reais.");
+                    System.out.println("Preço total de " + litrosVendidos + " litros de gasolina é " + precoTotal + " reais.");
                 }
                 break;
 

@@ -12,7 +12,26 @@ public class SwitchCase3 {
         float num2 = leia.nextFloat();
 
         System.out.println("Insira a operação desejada: \n1- Média\n2- Diferença\n3- Produto\n4- Divisão");
-        float operacao = leia.nextInt();
+        int operacao = leia.nextInt();
+
+                switch(operacao){
+            case 1:
+                System.out.println("A média desses dois números resulta em " + (num1+num2)/2 + ".");
+            break; 
+            case 2:
+                System.out.println("A diferença desses dois números resulta em " + (num1 - num2) + ".");
+            break; 
+            case 3:
+                System.out.println("O produto desses dois números resulta em " + (num1 * num2) + ".");
+            break; 
+            case 4:
+                System.out.println("A divisão desses dois números resulta em " + (num1 / num2) + ".");
+            break; 
+
+            default:
+                System.out.println("Código inválido!");
+            break;
+        }
 
         leia.close();
     }

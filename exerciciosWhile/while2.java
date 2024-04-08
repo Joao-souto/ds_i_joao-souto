@@ -1,8 +1,12 @@
 package exerciciosWhile;
 
 public class while2 {
-    
-}
+    public static void main(String[] args) {
+        int i = 0;
 
-// 2.	Programa em Java que mostra os números pares
-// Escreva um aplicativo em Java mostra todos os números pares de 1 até 100.
+        while (i<101) {
+            System.out.println(i);
+        i = i + 2; 
+        }
+    }
+}

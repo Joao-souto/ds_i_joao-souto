@@ -1,7 +1,14 @@
 package exerciciosWhile;
-
+import java.util.Scanner;
 public class while4 {
-    
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+
+        System.out.println("Insira a quantidade de alunos desta sala: ");
+        int quantidadeAlunos = leia.nextInt();
+        int i =1;
+
+    }
 }
 
 // 4.	Programa em Java que calcula a média das notas de uma turma

@@ -1,5 +1,4 @@
 package exerciciosWhile;
-
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -18,11 +17,12 @@ public class while5 {
         float media = media(numeros);
         float maior = maior(numeros);
         float menor = menor(numeros);
+        Arrays.sort(numeros);
 
         System.out.println("A média destes números é " + media + ".");
         System.out.println("O maior número entre estes números é " + maior + ".");
         System.out.println("O menor destes números é " + menor + ".");
-        System.out.println("Sequência organizada: " + Arrays.toString(numeros));
+        System.out.println("Ordem crescente: " + Arrays.toString(numeros));
 
         leia.close();
     }
@@ -30,7 +30,6 @@ public class while5 {
     public static float media(float[] numeros) {
         int i = 0;
         float soma = 0;
-
         while (i < numeros.length) {
             soma = soma + numeros[i];
             i++;

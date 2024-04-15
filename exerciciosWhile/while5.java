@@ -40,7 +40,7 @@ public class while5 {
 
     public static float maior(float[] numeros) {
         float maior = numeros[0];
-        for (int i = 1; i < numeros.length; i++) {
+        for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] > maior) {
                 maior = numeros[i];
             }
@@ -50,7 +50,7 @@ public class while5 {
 
     public static float menor(float[] numeros) {
         float menor = numeros[0];
-        for (int i = 1; i < numeros.length; i++) {
+        for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] < menor) {
                 menor = numeros[i];
             }

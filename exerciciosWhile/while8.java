@@ -1,16 +1,35 @@
 package exerciciosWhile;
 
+import java.util.Scanner;
+
 public class while8 {
-    
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        int i = 0;
+
+        System.out.println("Insira o tamanho do quadrado que deseja: ");
+        int tamanhoQuadrado = leia.nextInt();
+
+        while (i < tamanhoQuadrado) {
+            String quadrado = repeatString(" X ", tamanhoQuadrado);
+            if (i > 0 && i < (tamanhoQuadrado - 1)) {
+                quadrado = repeatString("  ", tamanhoQuadrado);
+                System.out.println(" X " + quadrado + "X ");
+            } else {
+                System.out.println(quadrado);
+            }
+            i++;
+        }
+
+        leia.close();
+    }
+
+    public static String repeatString(String str, int count) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            sb.append(str);
+        }
+        return sb.toString();
+    }
+
 }
-
-// 8.	Quadrado de asteriscos e espaços em branco
-
-// Escreva um programa que lê o tamanho do lado de um quadrado e imprime um quadrado daquele tamanho com asteriscos e espaços em branco. Seu programa deve funcionar para quadrados com lados de todos os tamanhos entre 1 e 20.
-
-// Para lado igual a 5:
-// *****
-// *      *
-// *      *
-// *      *
-// *****

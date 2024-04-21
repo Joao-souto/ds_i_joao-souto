@@ -7,8 +7,18 @@ public class repeticao1 {
         System.out.println("Insira dois valores, o primeiro será dividido pelo segundo! /n Insira o primeiro valor: ");
         float valor1 = leia.nextFloat();
 
+        System.out.println("Insira o segundo valor: ");
+        float valor2 = leia.nextFloat();
+
+        while(valor2 == 0){
+            System.out.println("O segundo valor não pode ser igual a zero, insira novamente: ");
+            valor2 = leia.nextFloat();
+        }
+
+        float resultado = valor1/valor2;
+        System.out.println("O resultado desta divisão é " + resultado + ".");
+
         leia.close();
     }
     
 }
-// 1 - Escreva um algoritmo para ler 2 valores e se o segundo valor informado for ZERO, deve ser lido um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero e imprimir o resultado da divisão do primeiro valor lido pelo segundo valor lido. 

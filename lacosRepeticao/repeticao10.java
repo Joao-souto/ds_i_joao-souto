@@ -7,11 +7,11 @@ public class repeticao10 {
         float n = 0;
 
         while(n<=0){  
-        System.out.println("Insira um valor: ");
+        System.out.println("Insira um valor(positivo): ");
         n = leia.nextFloat();
         }
         
-        for(i=1;i<=n;i++){
+        for(int i=1;i<=n;i++){
             System.out.println(i);
         }
 

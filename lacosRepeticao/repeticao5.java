@@ -6,7 +6,7 @@ public class repeticao5 {
         String novoCalculo = "s";
 
         while(novoCalculo.equals("s")){
-            System.out.println("Insira dois valores, o primeiro será dividido pelo segundo! /n Insira o primeiro valor: ");
+            System.out.println("Insira dois valores, o primeiro será dividido pelo segundo! \nInsira o primeiro valor: ");
             float valor1 = leia.nextFloat();
     
             System.out.println("Insira o segundo valor: ");
@@ -21,7 +21,7 @@ public class repeticao5 {
             System.out.println("O resultado desta divisão é " + resultado + ".");
     
             System.out.println("NOVO CÁLCULO(S/N)?");
-            novoCalculo = leia.nextString();
+            novoCalculo = leia.next();
             novoCalculo = novoCalculo.toLowerCase();
         }
 

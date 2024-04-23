@@ -4,7 +4,7 @@ public class repeticao4 {
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
 
-        System.out.println("Insira dois valores, o primeiro será dividido pelo segundo! /n Insira o primeiro valor: ");
+        System.out.println("Insira dois valores, o primeiro será dividido pelo segundo! \nInsira o primeiro valor: ");
         float valor1 = leia.nextFloat();
 
         System.out.println("Insira o segundo valor: ");

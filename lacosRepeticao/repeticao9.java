@@ -8,7 +8,7 @@ public class repeticao9 {
         System.out.println("Insira um valor: ");
         float n = leia.nextFloat();
 
-        for(i=1;i<=n;i++){
+        for(int i=1;i<=n;i++){
             System.out.println(i);
         }
         leia.close();

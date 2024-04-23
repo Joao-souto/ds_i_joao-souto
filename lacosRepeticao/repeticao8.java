@@ -2,7 +2,7 @@ package lacosRepeticao;
 
 public class repeticao8 {
     public static void main(String[] args){
-        for(i=101;i<111;i++){
+        for(int i=101;i<111;i++){
             System.out.println(i);
         }
     }

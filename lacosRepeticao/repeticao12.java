@@ -5,12 +5,14 @@ public class repeticao12 {
     public static void main(String[] args){
         Scanner leia = new Scanner(System.in);
 
-        while(n>0 && n<11){  
-        System.out.println("Insira um valor: ");
-        int valor = leia.nextFloat();
+        System.out.println("Insira um valor(entre 1 e 10): ");
+        int valor = leia.nextInt();
+        while(valor<=0 || valor>10){  
+        System.out.println("Insira um valor(entre 1 e 10): ");
+        valor = leia.nextInt();
         }
         
-        for(i=1;i<11;i++){
+        for(int i=1;i<11;i++){
             System.out.println(i*valor);
         }
 

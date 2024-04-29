@@ -1,7 +1,6 @@
 package arrays;
 import java.util.Scanner;
-
-public class arrays1 {
+public class arrays2 {
     public static void main(String[] args) {
         Scanner Scanner = new Scanner(System.in);
         int array[] = new int[10];
@@ -10,16 +9,16 @@ public class arrays1 {
             System.out.println("Insira o valor do número " + (i+1) + ": ");
             array[i] = Scanner.nextInt();
         }
-        int menor = array[0];
+        System.out.println("");
+        int consulta;
         for (int i = 0; i < array.length; i++) {
             if (array[i]<menor) {
                 menor = array[i];
             }
         }
 
-        System.out.println("O menor valor deste array é " + menor + ".");
 
         Scanner.close(); 
     }
 }
-// Faça algoritmo para ler um vetor de 10 valores inteiros e depois identificar e mostrar o menor valor 
+// Altere o algoritmo anterior para procurar um número digitado pelo usuário, informando a sua posição, se ele constar no vetor 

@@ -1,7 +1,11 @@
 package arrays;
+import java.util.Scanner;
 
 public class arrays3 {
-    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+    }
 }
 // Faça um algoritmo que inverta a posição dos valores de um vetor de seis posições de inteiros  
 

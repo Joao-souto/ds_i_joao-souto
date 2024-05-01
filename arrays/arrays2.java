@@ -15,7 +15,7 @@ public class arrays2 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == consulta) {
-                System.out.println("O valor" + consulta + " está no índice " + i + " do array.");
+                System.out.println("O valor " + consulta + " está no índice " + i + " do array.");
                 verificado = true;
             }
         }

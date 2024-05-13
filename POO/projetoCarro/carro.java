@@ -6,6 +6,7 @@ public class carro {
     String marca;
     int ano;
     int velocidade;
+    boolean freio;
 
     //  MÉTODOS
     

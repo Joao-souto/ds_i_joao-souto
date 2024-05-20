@@ -1,4 +1,4 @@
-package POO.IntroducaoPOO;
+package POO.IntroducaoPOO.Aula01;
 
 public class GettersAndSetters {
     // getters e setters são métodos utilizados para acessar(get) ou alterar/atribuir(set) valores de um atributo de determinado objeto, sem alterar a classe

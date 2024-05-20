@@ -1,4 +1,4 @@
-package POO.IntroducaoPOO;
+package POO.IntroducaoPOO.aula02;
 
 public class UtilizandoConstrutor {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package POO.IntroducaoPOO;
+package POO.IntroducaoPOO.Aula01;
 // Criação de classe
 public class Arcondicionado { 
     // Criação de atributos definindo sua visibilidade

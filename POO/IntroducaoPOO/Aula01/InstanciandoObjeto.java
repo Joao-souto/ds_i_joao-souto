@@ -1,4 +1,4 @@
-package POO.IntroducaoPOO;
+package POO.IntroducaoPOO.Aula01;
 
 public class InstanciandoObjeto {
     public static void main(String[] args) {

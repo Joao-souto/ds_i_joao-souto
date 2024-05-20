@@ -2,6 +2,7 @@ package POO.IntroducaoPOO;
 
 public class GettersAndSetters {
     // getters e setters são métodos utilizados para acessar(get) ou alterar/atribuir(set) valores de um atributo de determinado objeto, sem alterar a classe
+    // O acesso e alteração dessa forma garante uma maior segurança do código
 
     public static void main(String[] args) {
         Arcondicionado objeto1 = new Arcondicionado();

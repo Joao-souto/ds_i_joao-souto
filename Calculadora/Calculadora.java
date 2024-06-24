@@ -1,88 +1,90 @@
 package Calculadora;
 
-import java.awt.BorderLayout;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Calculadora {
+public class Calculadora extends JFrame implements ActionListener {
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                criarGUI();
-            }
-        });
-    }
+    private JTextField display;
+    private double num1, num2, result;
+    private char operator;
 
-    public static void criarGUI() {
-        JFrame frame = new JFrame("Calculadora - Java Swing");
-        frame.setSize(800, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel InterfaceGeral = new JPanel();
+    public Calculadora() {
+        // Configurações da janela
+        setTitle("Calculadora em JAVA");
+        setSize(300, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
 
-        // Criação do JPanel para os botões
-        JPanel botoes = new JPanel();
-        botoes.setLayout(new BoxLayout(botoes, BoxLayout.Y_AXIS));
+        // Configuração do painel do display
+        display = new JTextField();
+        display.setEditable(false);
+        display.setFont(new Font("Arial", Font.BOLD, 24));
+        add(display, BorderLayout.NORTH);
 
-        // Criação do JPanel para os inputs
-        JPanel fileira1 = new JPanel();
-        JPanel fileira2 = new JPanel();
-        JPanel fileira3 = new JPanel();
-        JPanel fileira4 = new JPanel();
+        // Configuração do painel dos botões
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(4, 4, 10, 10));
 
-        // Criação dos botões de operações
-        JButton adicaoButton = new JButton("+");
-        JButton subtracaoButton = new JButton("-");
-        JButton divisaoButton = new JButton("/");
-        JButton multiplicacaoButton = new JButton("*");
-        botoes.add(adicaoButton);
-        botoes.add(subtracaoButton);
-        botoes.add(divisaoButton);
-        botoes.add(multiplicacaoButton);
+        // Botões da calculadora
+        String[] buttons = {
+                "7", "8", "9", "/",
+                "4", "5", "6", "*",
+                "1", "2", "3", "-",
+                "0", "C", "=", "+"
+        };
 
-        // Criação dos botões de números
-        JButton[] numButtons = new JButton[10];
-        for (int i = 0; i < 10; i++) {
-            numButtons[i] = new JButton(String.valueOf(i));
+        for (String text : buttons) {
+            JButton button = new JButton(text);
+            button.setFont(new Font("Arial", Font.BOLD, 24));
+            button.addActionListener(this);
+            panel.add(button);
         }
 
-        // Criação de botões restantes
-        JButton virgulaButton = new JButton(",");
-        JButton apague = new JButton("<|");
+        add(panel);
 
-        // adicionando botões as fileiras
-        fileira1.add(numButtons[9]);
-        fileira1.add(numButtons[8]);
-        fileira1.add(numButtons[7]);
-        fileira2.add(numButtons[6]);
-        fileira2.add(numButtons[5]);
-        fileira2.add(numButtons[4]);
-        fileira3.add(numButtons[3]);
-        fileira3.add(numButtons[2]);
-        fileira3.add(numButtons[1]);
-        fileira4.add(numButtons[0]);
-        fileira4.add(virgulaButton);
-        fileira4.add(apague);
+        // Exibir a janela
+        setVisible(true);
+    }
 
-        JTextField textField = new JTextField("RESULTADO: ");
-        textField.setEditable(false); 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
 
-        // Adicionando fileiras a um componente para organizar 
-        InterfaceGeral.add(fileira1);
-        InterfaceGeral.add(fileira2);
-        InterfaceGeral.add(fileira3);
-        InterfaceGeral.add(fileira4);
+        if (command.charAt(0) >= '0' && command.charAt(0) <= '9') {
+            display.setText(display.getText() + command);
+        } else if (command.charAt(0) == 'C') {
+            display.setText("");
+        } else if (command.charAt(0) == '=') {
+            num2 = Double.parseDouble(display.getText());
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+            display.setText(String.valueOf(result));
+            num1 = result;
+        } else {
+            if (!display.getText().isEmpty()) {
+                num1 = Double.parseDouble(display.getText());
+                operator = command.charAt(0);
+                display.setText("");
+            }
+        }
+    }
 
-        // Adição dos componentes ao JFrame
-        frame.add(InterfaceGeral);
-        frame.add(botoes);
-
-        // Exibe o JFrame
-        frame.setVisible(true);
+    public static void main(String[] args) {
+        new Calculadora();
     }
 }

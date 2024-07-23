@@ -1,4 +1,4 @@
-package exerciciosWhile;
+package PrimeiroSemestre.exerciciosWhile;
 import java.util.Scanner;
 import java.util.Arrays;
 

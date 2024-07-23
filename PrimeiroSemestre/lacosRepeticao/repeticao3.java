@@ -1,4 +1,4 @@
-package lacosRepeticao;
+package PrimeiroSemestre.lacosRepeticao;
 import java.util.Scanner;
 public class repeticao3 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package exercicios1;
+package PrimeiroSemestre.exercicios1;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 

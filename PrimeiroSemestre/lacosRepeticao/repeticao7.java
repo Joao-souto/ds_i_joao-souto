@@ -1,4 +1,4 @@
-package lacosRepeticao;
+package PrimeiroSemestre.lacosRepeticao;
 
 public class repeticao7 {
     public static void main(String[] args){

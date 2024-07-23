@@ -1,4 +1,4 @@
-package exercicios1;
+package PrimeiroSemestre.exercicios1;
 public class AreaRetangulo{
     public static void main(String[] args){
         int base = 10;

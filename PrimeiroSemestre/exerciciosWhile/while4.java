@@ -1,4 +1,4 @@
-package exerciciosWhile;
+package PrimeiroSemestre.exerciciosWhile;
 import java.util.Scanner;
 public class while4 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Calculadora;
+package PrimeiroSemestre;
 
 import javax.swing.*;
 import java.awt.*;

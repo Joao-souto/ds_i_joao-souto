@@ -1,4 +1,4 @@
-package arrays;
+package PrimeiroSemestre.arrays;
 import java.util.Scanner;
 
 public class arrays5 {

@@ -1,4 +1,4 @@
-package exerciciosWhile;
+package PrimeiroSemestre.exerciciosWhile;
 
 public class while1 {
     public static void main(String[] args) {

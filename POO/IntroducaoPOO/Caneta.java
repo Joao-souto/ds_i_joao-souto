@@ -1,4 +1,4 @@
-package POO.IntroducaoPOO.aula02;
+package POO.IntroducaoPOO;
 
 public class Caneta {
     public String cor;

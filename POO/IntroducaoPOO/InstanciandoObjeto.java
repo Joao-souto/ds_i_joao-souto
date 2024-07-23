@@ -17,6 +17,9 @@ public class InstanciandoObjeto {
         // arcondicionado1.desligar();
         // arcondicionado1.status();
 
-        
+        ContaBanco contaJose = new ContaBanco();
+        contaJose.abrirConta("cc","José");
+        contaJose.depositar(1200);
+        contaJose.estadoAtual();
     }
 }

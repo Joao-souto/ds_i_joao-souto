@@ -8,81 +8,83 @@ public class ContaBanco{
     private boolean status;
 
     public void estadoAtual(){
-        println("---------------------------------------");
-        println("Número da conta: " + getNumConta());
-        println("Tipo de conta: " + getTipoConta());
-        println("Titular: " + getTitular());
-        println("Ativa: " + getStatus());
-        println("Saldo: " + getSaldo());
+        System.out.println("---------------------------------------");
+        System.out.println("Número da conta: " + getNumConta());
+        System.out.println("Tipo de conta: " + getTipoConta());
+        System.out.println("Titular: " + getTitular());
+        System.out.println("Ativa: " + getStatus());
+        System.out.println("Saldo: " + getSaldo());
     }
 
-    public void contaBanco(){
+    public ContaBanco(){
         saldo = 0;
         status = false;
     }
 
-    public void abrirConta(tc, nome){
-        this.tipoConta = setTipoConta(tc);
-        this.titular = setTitular(nome);
-        if (tc == "cc"){
+    public void abrirConta(String tc , String nome){
+        this.setStatus(true);
+        this.tipoConta = tc;
+        this.titular = nome;
+        if (tc.equals("cc")){
             this.setSaldo(50);
         }
-        else if(tc ==  "cp"){
+        else if(tc.equals("cp")){
             this.setSaldo(150);
         }
     }
 
     public void fecharConta(){
         if(this.getSaldo() > 0){
-            system.out.println("ERRO! Retire o valor da conta antes de encerrar!!");
+            System.out.println("ERRO! Retire o valor da conta antes de encerrar!!");
         }
         else if(this.getSaldo() < 0){
-            system.out.println("ERRO! Acerte o débito da conta antes de encerrar!!");
+            System.out.println("ERRO! Acerte o débito da conta antes de encerrar!!");
         }
         else{
-            this.setStatus(false)
-            system.out.println("Conta encerrada.");
+            this.setStatus(false);
+            System.out.println("Conta encerrada.");
         }
     }
 
     public void depositar(float v){
-        if(this.getStatus == true){
+        if(this.getStatus() == true){
             this.setSaldo(this.getSaldo() + v);
-            system.out.println("Depósito realizado na conta de " + this.getTitular + ".");
+            System.out.println("Depósito realizado na conta de " + this.getTitular() + ".");
         }
         else{
-            system.out.println("Impossível depositar em uma conta inativa!");
+            System.out.println("Impossível depositar em uma conta inativa!");
         }
     }
 
     public void sacar(float v){
-        if(this.getStatus == true){
+        if(this.getStatus() == true){
             if(this.getSaldo()>=v){
                 this.setSaldo(this.getSaldo() - v);
-                system.out.println("Saque realizado no valor de " + v + " reais. Saldo disponível: " + this.getSaldo() + ".");
+                System.out.println("Saque realizado no valor de " + v + " reais. Saldo disponível: " + this.getSaldo() + ".");
             }
             else{
-                system.out.println("Impossível sacar o valor de " + v + " reais pois o saldo disponível é " + this.getSaldo() + " reais.");
+                System.out.println("Impossível sacar o valor de " + v + " reais pois o saldo disponível é " + this.getSaldo() + " reais.");
             }
         }
         else{
-            system.out.println("Impossível sacar de uma conta inativa!");
+            System.out.println("Impossível sacar de uma conta inativa!");
         }
     }
 
     public void pagarMensal(){
         int v = 0;
-        if(this.getTipoConta() == "cc"){
+        String tipo = this.getTipoConta();
+        if(tipo.equals("cc")){
             v = 12;
         }
-        else if(this.getTipoConta() == "cp"){
+        else if(tipo.equals("cp")){
             v = 20;
         }
         if(getStatus() == true){
             this.setSaldo(this.getSaldo() - v);
         }
         else if(getStatus() == false){
-            system.out.println("Conta inativa!");  
+            System.out.println("Conta inativa!");  
         }
     }
 

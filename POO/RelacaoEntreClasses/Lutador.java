@@ -5,14 +5,14 @@ public class Lutador{
         private int id;
         private String nacionalidade;
         private int idade;
-        private float altura;
-        private float peso;
+        private double altura;
+        private double peso;
         private String categoria;
         private int vitorias;
         private int derrotas;
         private int empates;
 
-        public Lutador(String nome, String nacionalidade, int idade, float altura, float peso, int vitorias, int empates, int derrotas){
+        public Lutador(String nome, String nacionalidade, int idade, double altura, double peso, int vitorias, int empates, int derrotas){
             this.nome = nome;
             this.nacionalidade = nacionalidade;
             this.idade = idade;
@@ -36,10 +36,10 @@ public class Lutador{
         public int getIdade(){
             return this.idade;
         }
-        public float getAltura(){
+        public double getAltura(){
             return this.altura;
         }
-        public float getPeso(){
+        public double getPeso(){
             return this.peso;
         }
         public String getCategoria(){
@@ -68,14 +68,14 @@ public class Lutador{
         public void setIdade(int idade){
             this.idade = idade;
         }
-        public void setAltura(float altura){
+        public void setAltura(double altura){
             this.altura = altura;
         }
-        public void setPeso(float peso){
+        public void setPeso(double peso){
             this.peso = peso;
             this.setCategoria();
         }
-        public void setCategoria(){
+        private void setCategoria(){
             if(peso<=50 && peso>0){
                 this.categoria = "Leve";
             }
@@ -110,6 +110,7 @@ public class Lutador{
         }
 
         public void apresentar(){
+            System.out.println("");
             System.out.println("------LUTADOR " + this.getId() + "------");
             System.out.println("Nome: " + this.getNome());
             System.out.println("Nacionalidade: " + this.getNacionalidade());

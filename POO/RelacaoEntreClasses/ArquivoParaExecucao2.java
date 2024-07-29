@@ -1,25 +1,54 @@
 package POO.RelacaoEntreClasses;
 
+import java.util.Scanner;
+
 public class ArquivoParaExecucao2 {
     public static void main(String[] args) {
-        // Criando um array de Lutadores com tamanho 5
+        Scanner leia = new Scanner(System.in);
         Lutador lutadores[] = new Lutador[5];
 
-        // Inicializando os lutadores
-        lutadores[0] = new Lutador("João Pedro", "Brasileiro", 17, 1.68f, 64.3f, 100, 50, 9);
-        lutadores[1] = new Lutador("Maria Silva", "Portuguesa", 18, 1.70f, 60.0f, 95, 45, 8);
-        lutadores[2] = new Lutador("Carlos Souza", "Mexicano", 20, 1.75f, 70.5f, 105, 55, 7);
-        lutadores[3] = new Lutador("Ana Costa", "Espanhola", 19, 1.65f, 55.8f, 98, 48, 10);
-        lutadores[4] = new Lutador("Pedro Oliveira", "Argentino", 21, 1.80f, 75.2f, 110, 60, 6);
+        String nome;
+        String nacionalidade;
+        int idade;
+        double altura;
+        double peso;
+        int vitorias;
+        int derrotas;
+        int empates;
 
         for (int i = 0; i < lutadores.length; i++) {
-            lutadores[i].setId(i);
+            System.out.println("");
+            System.out.println("Insira o nome do seu lutador: ");
+            nome = leia.next();
+                       
+            System.out.println("Insira a idade: ");
+            idade = leia.nextInt();
+
+            System.out.println("Insira a nacionalidade: ");
+            nacionalidade = leia.next();
+
+            System.out.println("Insira a altura: ");
+            altura = leia.nextDouble();
+
+            System.out.println("Insira o peso: ");
+            peso = leia.nextDouble();
+
+            System.out.println("Insira a quantidade de vitórias: ");
+            vitorias = leia.nextInt();
+
+            System.out.println("Insira a quantidade de derrotas: ");
+            derrotas = leia.nextInt();
+
+            System.out.println("Insira a quantidade de empates: ");
+            empates = leia.nextInt();
+
+            lutadores[i] = new Lutador(nome, nacionalidade, idade, altura, peso, vitorias, empates, derrotas);
+            lutadores[i].setId(i+1);
         }
+        leia.close();
 
-
-        lutadores[1].apresentar();
-        lutadores[2].apresentar();
-        lutadores[3].apresentar();
-        lutadores[4].apresentar();
+        for (int i = 0; i < lutadores.length; i++) {
+            lutadores[i].apresentar();
+        }
     }
 }

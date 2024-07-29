@@ -16,7 +16,7 @@ public class ArquivoParaExecucao2 {
         int derrotas;
         int empates;
 
-        for (int i = 0; i < lutadores.length; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("");
             System.out.println("Insira o nome do seu lutador: ");
             nome = leia.next();
@@ -47,8 +47,9 @@ public class ArquivoParaExecucao2 {
         }
         leia.close();
 
-        for (int i = 0; i < lutadores.length; i++) {
-            lutadores[i].apresentar();
-        }
+        Luta PrimeiraLuta = new Luta();
+        PrimeiraLuta.marcarLuta(lutadores[0],lutadores[1]);
+        PrimeiraLuta.lutar();
+
     }
 }

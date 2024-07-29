@@ -110,7 +110,6 @@ public class Lutador{
         }
 
         public void apresentar(){
-            System.out.println("");
             System.out.println("------LUTADOR " + this.getId() + "------");
             System.out.println("Nome: " + this.getNome());
             System.out.println("Nacionalidade: " + this.getNacionalidade());

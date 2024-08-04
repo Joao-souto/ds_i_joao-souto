@@ -4,6 +4,12 @@ public class Pessoa{
     private String sexo;
     private int idade;
 
+    public Pessoa(String n, String s, int i){
+        this.nome = n;
+        this.idade = i;
+        this.sexo = s;
+    }
+
     public String getNome() {
         return nome;
     }

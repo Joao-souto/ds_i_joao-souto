@@ -1,5 +1,6 @@
-package POO.Heranca;
-public class Pessoa{
+package POO.Heranca.HerancaPt2;
+
+public abstract class Pessoa {
     private String nome;
     private String sexo;
     private int idade;
